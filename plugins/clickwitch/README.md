@@ -2,7 +2,27 @@
 
 Use your AI agent to generate missing detail-page images, save them to ClickWitch, and assemble the final page. ClickWitch supplies exact prompts and ordered references; your host's image tools or your signed-in ChatGPT UI render the images.
 
-Source: [jk7g14/clickwitch-plugin](https://github.com/jk7g14/clickwitch-plugin) · [Agent installation guide](https://raw.githubusercontent.com/jk7g14/clickwitch-plugin/main/INSTALL.md) · MIT license
+Source: [jk7g14/clickwitch-plugin](https://github.com/jk7g14/clickwitch-plugin) · [Agent installation guide](https://raw.githubusercontent.com/jk7g14/clickwitch-plugin/main/INSTALL.md) · [MIT license](https://github.com/jk7g14/clickwitch-plugin/blob/main/LICENSE) · [한국어 법률·적용 범위](https://github.com/jk7g14/clickwitch-plugin/blob/main/LEGAL.ko.md)
+
+## What is installed
+
+This repository ships an installable plugin for **both Codex and Claude Code**. Each host loads its own manifest and marketplace catalog, with a shared execution skill and remote MCP configuration:
+
+```text
+.agents/plugins/marketplace.json       # Codex marketplace
+.claude-plugin/marketplace.json        # Claude Code marketplace
+plugins/clickwitch/
+  .codex-plugin/plugin.json            # Codex plugin manifest
+  .claude-plugin/plugin.json           # Claude Code plugin manifest
+  .mcp.json                           # ClickWitch HTTP MCP connection
+  skills/generate-detail-page-images/
+    SKILL.md                          # Generate, save and merge workflow
+    agents/openai.yaml                # Codex skill metadata
+  LICENSE                             # Standard MIT license
+  LEGAL.ko.md                         # Korean legal context and scope
+```
+
+`INSTALL.md` guides installation of these files; it is not the plugin itself. Codex and Claude Code support depend on a compatible host CLI, account connection, and the image/browser capabilities described below. This repository does not install into Claude web or supply an image-generation runtime.
 
 ## Copy to your agent
 
@@ -60,7 +80,7 @@ A ClickWitch Pro/Growth account is required for operational MCP tools. Preparing
 
 ## Source, license and contributions
 
-The public repository contains the plugin, marketplace catalogs and installation documentation under the MIT license. The license does not cover the ClickWitch web service, private reference corpus or customer files. GitHub distribution is separate from inclusion in a provider's curated plugin directory.
+The public repository contains the plugin, marketplace catalogs and installation documentation under the standard MIT license. [LEGAL.ko.md](https://github.com/jk7g14/clickwitch-plugin/blob/main/LEGAL.ko.md) explains the Korean legal context without adding conditions to MIT. The ClickWitch web service, private reference corpus and customer files are not included in this distribution; their terms or rights do not change the MIT permissions for the included source. GitHub distribution is separate from inclusion in a provider's curated plugin directory.
 
 Use [GitHub issues](https://github.com/jk7g14/clickwitch-plugin/issues) for reproducible plugin problems and pull requests for small changes. Include host/version, synthetic fixtures, expected versus actual behavior and verification results. Never include credentials, private references or customer files. Keep exact prompts, attachment ordering, workspace ownership, credit confirmation and saved/merged completion checks intact.
 
