@@ -1,6 +1,6 @@
 {
   "name": "clickwitch",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Render ClickWitch detail-page sections with your image tools or ChatGPT, then save and assemble them through the web editor.",
   "author": {
     "name": "ClickWitch",
