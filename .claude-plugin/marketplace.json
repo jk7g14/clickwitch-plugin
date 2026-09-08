@@ -1,0 +1,13 @@
+{
+  "name": "clickwitch",
+  "owner": {
+    "name": "ClickWitch"
+  },
+  "plugins": [
+    {
+      "name": "clickwitch",
+      "source": "./plugins/clickwitch",
+      "version": "0.2.0"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+interface:
+  display_name: "ClickWitch Detail Images"
+  short_description: "Generate, save and merge ClickWitch detail-page images"
+  icon_small: "./assets/logo-512.png"
+  icon_large: "./assets/logo-512.png"
+  brand_color: "#FE5000"
+  default_prompt: "Use $generate-detail-page-images to generate images for this ClickWitch run."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "clickwitch"
+      description: "ClickWitch MCP server"
+      transport: "streamable_http"
+      url: "https://clickwitch.ai/api/mcp"

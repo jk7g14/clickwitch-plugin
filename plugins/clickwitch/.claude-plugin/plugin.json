@@ -1,0 +1,18 @@
+{
+  "name": "clickwitch",
+  "version": "0.2.0",
+  "description": "Render ClickWitch detail-page sections with your image tools or ChatGPT, then save and assemble them through the web editor.",
+  "author": {
+    "name": "ClickWitch",
+    "url": "https://clickwitch.ai"
+  },
+  "homepage": "https://github.com/jk7g14/clickwitch-plugin",
+  "license": "MIT",
+  "keywords": [
+    "ecommerce",
+    "detail-page",
+    "mcp",
+    "computer-use"
+  ],
+  "mcpServers": "./.mcp.json"
+}

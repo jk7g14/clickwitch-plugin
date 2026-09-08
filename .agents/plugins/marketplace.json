@@ -1,0 +1,20 @@
+{
+  "name": "clickwitch",
+  "interface": {
+    "displayName": "ClickWitch"
+  },
+  "plugins": [
+    {
+      "name": "clickwitch",
+      "source": {
+        "source": "local",
+        "path": "./plugins/clickwitch"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

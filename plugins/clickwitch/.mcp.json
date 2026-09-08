@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "clickwitch": {
+      "type": "http",
+      "url": "https://clickwitch.ai/api/mcp"
+    }
+  }
+}

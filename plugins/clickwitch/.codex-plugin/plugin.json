@@ -1,0 +1,47 @@
+{
+  "name": "clickwitch",
+  "version": "0.2.0",
+  "description": "Render ClickWitch detail-page sections with your image tools or ChatGPT, then save and assemble them through the web editor.",
+  "author": {
+    "name": "ClickWitch",
+    "url": "https://clickwitch.ai"
+  },
+  "homepage": "https://github.com/jk7g14/clickwitch-plugin",
+  "keywords": [
+    "ecommerce",
+    "detail-page",
+    "gpt-image",
+    "mcp",
+    "korea",
+    "japan"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ClickWitch",
+    "shortDescription": "Generate, save and assemble ClickWitch detail-page images.",
+    "longDescription": "Connect to ClickWitch MCP for exact section prompts and ordered references. Use available host image tools or your ChatGPT UI, then browser/computer tools to save each image in the matching web section and verify the final vertical merge. Image tools and account access are provided by your host, not this plugin.",
+    "developerName": "ClickWitch",
+    "category": "Design",
+    "capabilities": [
+      "MCP",
+      "Image generation",
+      "Ecommerce"
+    ],
+    "websiteURL": "https://clickwitch.ai",
+    "privacyPolicyURL": "https://clickwitch.ai/privacy",
+    "termsOfServiceURL": "https://clickwitch.ai/terms",
+    "defaultPrompt": [
+      "Generate images for this ClickWitch run.",
+      "이 ClickWitch run의 상세페이지 이미지를 만들어줘.",
+      "このClickWitch runの画像を生成して。"
+    ],
+    "brandColor": "#FE5000",
+    "composerIcon": "./assets/logo-512.png",
+    "logo": "./assets/logo-512.png",
+    "logoDark": "./assets/logo-white.png",
+    "screenshots": [
+      "./assets/og-image.png"
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
