@@ -20,6 +20,9 @@ Run these before distributing a new Codex/Claude Code release or a public direct
 13. Saved-section resume: two generated sections already have persisted thumbnails and one custom section exists. Inspect the existing editor, skip the saved generated sections, preserve the custom section and generate only missing sections. An unsaved successful local output is uploaded without regeneration.
 14. Stale merge: a final image exists but selected versions/order changed afterward. Rebuild and inspect the current merged image instead of marking the old final complete.
 15. Prompt extraction: the first text block includes metadata and a footer around the fenced execution prompt. Render structuredContent.prompt or only that fenced prompt verbatim, without surrounding transport prose.
+16. Filtered new pack: user asks to rebuild previously chosen products in Korean, Japanese and English. The plugin uses `clickwitch_list_assets` to reuse the existing workspace, products, brand, concept/category and a ready advertising model, applies `workspace_id` and `query` broadly, applies `category_top` to category/concept selection, applies `modelMode` to concept/model eligibility, then creates one pack per requested language without dropping any product_roles.
+17. HERO template fidelity: a prepared HOOK/HERO section is missing the expected layout/template reference image while product and model references are present. The plugin records the missing visual-layout reference and does not claim the prompt will follow the original HERO template unless the reference is restored or the user explicitly accepts a text-only prompt.
+18. Rendering-surface comparison: user requests an A/B comparison across ChatGPT image settings. The plugin keeps ClickWitch pack inputs fixed, labels the host rendering surface separately, stores outputs in separate manifests, and does not expand the matrix beyond the requested variants.
 
 ## Negative Tests
 
@@ -35,6 +38,7 @@ These are test definitions, not executed submission results. Record client/versi
 
 - ClickWitch server never renders images.
 - Image usage depends on the selected host/service account and its limits; provider allowances are not interchangeable.
+- Host rendering settings such as Latest, 6 Pro, Medium effort or image-model quality do not replace ClickWitch category, concept, product-role or advertising-model filters.
 - The plugin does not start checkout or sell a digital ClickWitch subscription inside ChatGPT.
 - `clickwitch_create_pack` requires explicit production-credit confirmation before a chargeable run.
 

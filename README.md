@@ -1,6 +1,6 @@
 # ClickWitch plugin for Codex and Claude Code
 
-Use your AI agent to generate missing detail-page images, save them to ClickWitch, and assemble the final page. ClickWitch supplies exact prompts and ordered references; your host's image tools or your signed-in ChatGPT UI render the images.
+Use your AI agent to choose or reuse ClickWitch detail-page inputs, generate missing section images, save them to ClickWitch, and assemble the final page. ClickWitch supplies exact prompts and ordered references; your host's image tools or your signed-in ChatGPT UI render the images.
 
 Source: [jk7g14/clickwitch-plugin](https://github.com/jk7g14/clickwitch-plugin) · [Agent installation guide](https://raw.githubusercontent.com/jk7g14/clickwitch-plugin/main/INSTALL.md) · [MIT license](https://github.com/jk7g14/clickwitch-plugin/blob/main/LICENSE) · [한국어 법률·적용 범위](https://github.com/jk7g14/clickwitch-plugin/blob/main/LEGAL.ko.md)
 
@@ -66,17 +66,19 @@ A source checkout or the optional ClickWitch ZIP includes both marketplace catal
 
 ## Run and resume
 
-After installation and account connection, provide a result URL:
+After installation and account connection, provide either a result URL or the workspace/product set you want to rebuild.
 
 > Continue this ClickWitch run. Generate only missing section images, save them to their existing sections, and assemble the final page: [paste your result URL].
 
-The skill preserves the workspace, run and section IDs, product facts, chosen model references and custom-image sections. It passes the exact execution prompt with the complete ordered attachment set to the selected host image tool or ChatGPT UI. It respects installed browser, computer-use and image-tool instructions.
+For a new or regenerated pack, the skill first reuses existing workspaces, products, brands, concepts, categories and ready advertising models through ClickWitch inventory tools. It filters by workspace and query, applies category filters to categories/concepts, uses `modelMode` for concept/model eligibility, then keeps the selected product roles complete across languages such as Korean, Japanese and English. For comparison requests, provide the baseline run or manifest and the exact variants to test; the skill keeps those outputs separate instead of widening the experiment on its own.
+
+The skill preserves the workspace, run and section IDs, product facts, chosen model references, chosen category/theme, product roles and custom-image sections. It passes the exact execution prompt with the complete ordered attachment set to the selected host image tool, ChatGPT UI or user-selected Chrome extension path. It respects installed browser, computer-use and image-tool instructions.
 
 Selecting **이미지 선택** in the matching existing section automatically saves the file. The skill verifies the persisted thumbnail, selects the intended versions and order, then uses **최종 정리 → 세로 병합 이미지 만들기 → 최종 이미지 열기/다운로드**. Completion requires saved sections and a verified current merged image. On resume, it skips saved sections and uploads existing unsaved output files before generating again.
 
 Full execution needs host-provided image generation or ChatGPT browser control, file transfer, and access to the ClickWitch web editor. This plugin contains no browser runtime or image renderer. When a capability is missing, it reports the exact pending step and a resumable section-to-file mapping.
 
-A ClickWitch Pro/Growth account is required for operational MCP tools. Preparing an existing section costs zero ClickWitch credits. Creating a new pack consumes production credits and follows the tool's estimate and confirmation contract. Image rendering uses the selected host/service's plan and limits; this plugin does not make provider allowances interchangeable or initiate subscription checkout.
+A ClickWitch Pro/Growth account is required for operational MCP tools. Preparing an existing section costs zero ClickWitch credits. Creating a new pack consumes production credits and follows the tool's estimate and confirmation contract. Image rendering uses the selected host/service's plan and limits. A ChatGPT picker such as Latest, 6 Pro, Medium effort or an image-model setting changes the rendering surface, not the ClickWitch pack's category, concept or advertising-model identity. This plugin does not make provider allowances interchangeable or initiate subscription checkout.
 
 ## Source, license and contributions
 
